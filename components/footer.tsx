@@ -37,7 +37,7 @@ export function Footer() {
                 { href: '/eventos-parceiros', label: 'Eventos Parceiros' },
                 { href: '/parcerias', label: 'Parcerias' },
                 { href: '/faq', label: 'FAQ' },
-                { href: '/blog', label: 'Blog' },
+                // { href: '/blog', label: 'Blog' },
               ].map((link) => (
                 <Link 
                   key={link.href}

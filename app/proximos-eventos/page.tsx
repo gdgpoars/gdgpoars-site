@@ -4,13 +4,32 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { EventsCalendar } from '@/components/eventos/events-calendar'
 import { EventsList } from '@/components/eventos/events-list'
+import { Event } from '../types'
+import { formatDateUS } from '../utils/formatDate'
 
 export const metadata: Metadata = {
   title: 'Proximos Eventos | GDG Porto Alegre',
   description: 'Confira a agenda de eventos do GDG Porto Alegre - meetups, workshops, encontros e muito mais.',
 }
 
-export default function ProximosEventosPage() {
+const SHEET_URL = 'https://docs.google.com/spreadsheets/d/1uk8a3mEJ-ydwNvC48QLKEPK5aLjxG66zUFi9bUaNjnE/export?format=csv&gid=0';
+
+async function getEvents(): Promise<Event[]> {
+  const response = await fetch(SHEET_URL);
+  const csv = await response.text();
+
+  const lines = csv.split('\n').slice(1);
+
+  return lines.map(line => {
+    const [name, date, time, location, description, modality, rspv, investment] = line.split(',');
+    return { name, date, time, location, description, modality, rspv, investment };
+  }) as Event[];
+}
+
+export default async function ProximosEventosPage() {
+  const events = await getEvents();
+  const eventDates = events.map(event => formatDateUS(event.date));
+
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -38,10 +57,10 @@ export default function ProximosEventosPage() {
                 Acompanhe nossa agenda e participe dos eventos da comunidade!
               </p>
             </div>
-            
+
             <div className="grid gap-8 lg:grid-cols-[1fr_auto]">
-              <EventsList />
-              <EventsCalendar />
+              <EventsList events={events} />
+              <EventsCalendar eventDates={eventDates} />
             </div>
           </div>
         </section>

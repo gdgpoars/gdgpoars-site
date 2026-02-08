@@ -4,15 +4,8 @@ import * as React from 'react'
 import { Calendar } from '@/components/ui/calendar'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
-// Datas dos eventos de exemplo - podem ser atualizadas
-const eventDates = [
-  new Date(2026, 1, 15), // Fevereiro
-  new Date(2026, 2, 22), // Marco
-  new Date(2026, 3, 10), // Abril
-  new Date(2026, 4, 18), // Maio
-]
 
-export function EventsCalendar() {
+export function EventsCalendar({ eventDates }: { eventDates: Date[] }) {
   const [date, setDate] = React.useState<Date | undefined>(new Date())
 
   return (
