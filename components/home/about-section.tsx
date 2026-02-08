@@ -6,31 +6,31 @@ import { Card, CardContent } from '@/components/ui/card'
 const objectives = [
   {
     icon: Users,
-    text: 'Conectar pessoas em uma comunidade solida e inclusiva',
+    text: 'Conectar pessoas em uma comunidade sólida e inclusiva',
     color: 'bg-google-blue',
     lightBg: 'bg-google-blue/10',
   },
   {
     icon: Heart,
-    text: 'Apoiar a diversidade e inclusao de generos na tecnologia',
+    text: 'Apoiar a diversidade e inclusão de gêneros na tecnologia',
     color: 'bg-google-red',
     lightBg: 'bg-google-red/10',
   },
   {
     icon: BookOpen,
-    text: 'Facilitar o aprendizado atraves da disseminacao de conhecimento colaborativo',
+    text: 'Facilitar o aprendizado através da disseminação de conhecimento colaborativo',
     color: 'bg-google-yellow',
     lightBg: 'bg-google-yellow/10',
   },
   {
     icon: Handshake,
-    text: 'Ser uma ponte entre empresas e pessoas, fazendo networking',
+    text: 'Ser uma ponte entre empresas e pessoas, gerando networking',
     color: 'bg-google-green',
     lightBg: 'bg-google-green/10',
   },
   {
     icon: Rocket,
-    text: 'Apoiar o crescimento profissional e empoderamento atraves da tecnologia',
+    text: 'Apoiar o crescimento profissional e empoderamento através da tecnologia',
     color: 'bg-google-blue',
     lightBg: 'bg-google-blue/10',
   },
@@ -101,7 +101,7 @@ export function AboutSection() {
                     <h4 className="font-semibold">Comunidade no WhatsApp</h4>
                   </div>
                   <p className="text-muted-foreground leading-relaxed">
-                    Mais de 500 membros ativos trocando ideias (quase que o dia todo!) sobre 
+                    Mais de 700 membros, com cerca de 70% membros ativos trocando ideias (quase que o dia todo!) sobre 
                     tecnologias, vagas, cursos, e nos apoiando mutuamente no dia a dia.
                   </p>
                 </div>
