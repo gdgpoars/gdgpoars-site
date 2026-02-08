@@ -18,7 +18,7 @@ import { ThemeToggle } from '@/components/theme-toggle'
 
 const navItems = [
   { href: '/', label: 'Home' },
-  { href: '/proximos-eventos', label: 'Proximos Eventos' },
+  { href: '/proximos-eventos', label: 'Próximos Eventos' },
   { href: '/eventos-parceiros', label: 'Eventos Parceiros' },
   { href: '/parcerias', label: 'Parcerias' },
   { href: '/faq', label: 'FAQ' },
