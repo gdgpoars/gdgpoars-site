@@ -15,16 +15,16 @@ import {
 
 const eventImages = [
   {
-    src: '/images/events/evento-1.jpg',
-    alt: 'Meetup da comunidade GDG Porto Alegre com pessoas desenvolvedoras networking',
+    src: '/images/events/devfest25-1.jpg',
+    alt: 'DevFestPortoAlegre2025 em Faculdade Dom Bosco',
   },
   {
-    src: '/images/events/evento-2.jpg',
-    alt: 'Palestra de tecnologia em evento do GDG Porto Alegre',
+    src: '/images/events/devfest25-2.jpg',
+    alt: 'Equipe voluntária de organização do DevFestPortoAlegre2025',
   },
   {
-    src: '/images/events/evento-3.jpg',
-    alt: 'Workshop de programacao com membros da comunidade',
+    src: '/images/events/frontinfloripa-1.jpg',
+    alt: 'GDG Porto Alegre no Front in Floripa 2025',
   },
 ]
 
