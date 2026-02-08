@@ -8,7 +8,7 @@ const socialLinks = [
     icon: MessageCircle,
     label: 'WhatsApp',
     description: 'Junte-se ao grupo',
-    href: 'https://chat.whatsapp.com/XXXXXX',
+    href: 'https://docs.google.com/forms/d/e/1FAIpQLScnIY1LIADYyteuSA_8PVJMBHrlv4A0WfoM_xPRVsXBSEQEOA/viewform',
     gradient: 'from-google-green to-google-green-dark',
     hoverGlow: 'group-hover:shadow-google-green/40',
   },
@@ -24,7 +24,7 @@ const socialLinks = [
     icon: Instagram,
     label: 'Instagram',
     description: 'Siga a gente',
-    href: 'https://www.instagram.com/gdgportoalegre/',
+    href: 'https://www.instagram.com/gdgpoa/',
     gradient: 'from-google-red to-google-red-dark',
     hoverGlow: 'group-hover:shadow-google-red/40',
   },
@@ -57,7 +57,7 @@ export function CTASection() {
             Junte-se a nos!
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-            Faca parte da nossa comunidade e conecte-se com pessoas incriveis da area de tecnologia.
+            Faça parte da nossa comunidade e conecte-se com pessoas incríveis da área de tecnologia.
           </p>
         </div>
         
