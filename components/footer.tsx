@@ -33,7 +33,7 @@ export function Footer() {
             <h3 className="text-lg font-semibold">Links Rapidos</h3>
             <nav className="flex flex-col gap-3">
               {[
-                { href: '/proximos-eventos', label: 'Proximos Eventos' },
+                { href: '/proximos-eventos', label: 'Próximos Eventos' },
                 { href: '/eventos-parceiros', label: 'Eventos Parceiros' },
                 { href: '/parcerias', label: 'Parcerias' },
                 { href: '/faq', label: 'FAQ' },
@@ -55,7 +55,7 @@ export function Footer() {
             <h3 className="text-lg font-semibold">Conecte-se</h3>
             <div className="flex items-center gap-3">
               <a
-                href="https://www.instagram.com/gdgportoalegre/"
+                href="https://www.instagram.com/gdgpoal/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center size-12 rounded-2xl bg-secondary text-muted-foreground hover:bg-google-red hover:text-white transition-all duration-300"
