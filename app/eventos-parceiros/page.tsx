@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button'
 
 export const metadata: Metadata = {
   title: 'Eventos Parceiros | GDG Porto Alegre',
-  description: 'Eventos de tecnologia parceiros do GDG Porto Alegre - descontos exclusivos para membros da comunidade.',
+  description: 'Eventos de tecnologia parceiros do GDG Porto Alegre - descontos exclusivos para membros da comunidade e uma galera indo viajar junto!',
 }
 
 interface PartnerEvent {
@@ -33,7 +33,7 @@ const partnerEvents: PartnerEvent[] = [
     date: '14 e 15 de Agosto, 2026',
     location: 'Pinhais, PR',
     websiteUrl: 'https://eventos.codecon.dev/eventos/codecon-summit-26',
-    whatsappGroupUrl: '#',
+    whatsappGroupUrl: 'https://chat.whatsapp.com/Dxof5hXSj6BETatKKHHrUp?mode=gi_t',
     couponCode: 'Em breve',
     discount: 'Em breve',
     logoPlaceholder: 'CC',
@@ -46,7 +46,7 @@ const partnerEvents: PartnerEvent[] = [
     date: '28 de Novembro, 2026',
     location: 'Florianopolis, SC',
     websiteUrl: 'https://frontinfloripa.com.br',
-    whatsappGroupUrl: '#',
+    whatsappGroupUrl: 'https://chat.whatsapp.com/KMBZvILATOK7vTUXEy6XNl?mode=gi_t',
     couponCode: 'Em breve',
     discount: 'Em breve',
     logoPlaceholder: 'FF',
