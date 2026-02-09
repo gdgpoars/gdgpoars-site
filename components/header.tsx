@@ -24,6 +24,7 @@ const navItems = [
   { href: '/faq', label: 'FAQ' },
   // { href: '/blog', label: 'Blog' },
   { href: '/contato', label: 'Contato' },
+  { href: '/dev-fest-poa-25', label: 'DevFestPOA25' },
 ]
 
 export function Header() {

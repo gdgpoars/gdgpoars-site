@@ -37,6 +37,7 @@ export function Footer() {
                 { href: '/eventos-parceiros', label: 'Eventos Parceiros' },
                 { href: '/parcerias', label: 'Parcerias' },
                 { href: '/faq', label: 'FAQ' },
+                { href: '/dev-fest-poa-25', label: 'DevFestPOA25' },
                 // { href: '/blog', label: 'Blog' },
               ].map((link) => (
                 <Link 
