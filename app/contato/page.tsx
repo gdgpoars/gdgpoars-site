@@ -61,7 +61,7 @@ export default function ContatoPage() {
               <h1 className="text-3xl font-bold md:text-4xl lg:text-5xl mb-6">
                 Entre em{' '}
                 <span className="bg-gradient-to-r from-google-blue via-google-red to-google-yellow bg-clip-text text-transparent">
-                  Contato
+                  contato
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground">
