@@ -111,7 +111,7 @@ const testimonials = [
 ]
 
 const sponsors = {
-  master: { name: "Faculdade Dom Bosco", "Asaas", "Datalakers", "Dentsu", "Kobe Apps", "Rocketseat", level: "master" },
+  master: { name: "Faculdade Dom Bosco", level: "master" },
   colaborador: ["Latromi TI", "Alura + Fiap"],
   apoio: ["CodeCafé", "ilegra", "KingHost", "4 TRIX IT"],
   impulso: ["Alcapone","Canal da Cloud","Casa Vivaro", "Codecon", "Critério", "Destino POA", "Use T.I.", "WK Job Hub"],
@@ -764,7 +764,6 @@ function TestimonialsSection() {
     )
 }
 
-// Sponsors Section
 function SponsorsSection() {
     return (
         <section id="patrocinadores" className="py-20 bg-background">
@@ -794,7 +793,7 @@ function SponsorsSection() {
                         <h4 className="text-center font-semibold mb-4 text-[#FBBC04]">Gold</h4>
                         <div className="flex flex-wrap justify-center gap-4">
                             {sponsors.colaborador.map((sponsor) => (
-                                <Card key={sponsor} className="hover:shadow-lg transition-shadow">
+                                <Card key={sponsor}>
                                     <CardContent className="p-4 px-8">
                                         <span className="font-medium">{sponsor}</span>
                                     </CardContent>
@@ -808,7 +807,7 @@ function SponsorsSection() {
                         <h4 className="text-center font-semibold mb-4 text-muted-foreground">Silver</h4>
                         <div className="flex flex-wrap justify-center gap-4">
                             {sponsors.apoio.map((sponsor) => (
-                                <Card key={sponsor} className="hover:shadow-lg transition-shadow">
+                                <Card key={sponsor}>
                                     <CardContent className="p-4 px-6">
                                         <span className="text-sm font-medium">{sponsor}</span>
                                     </CardContent>
@@ -830,11 +829,13 @@ function SponsorsSection() {
                                 </span>
                             ))}
                         </div>
+                    </div>
+
                 </div>
             </div>
         </section>
     )
-}
+}   
 
 // Impact Section
 function ImpactSection() {
