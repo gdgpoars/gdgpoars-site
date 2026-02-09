@@ -10,7 +10,7 @@ import { isValidURL } from '../utils/validURL'
 
 export const metadata: Metadata = {
   title: 'Parcerias | GDG Porto Alegre',
-  description: 'Empresas e marcas parceiras do GDG Porto Alegre - descontos e beneficios exclusivos para membros.',
+  description: 'Empresas e marcas parceiras do GDG Porto Alegre - descontos e benefícios exclusivos para membros.',
 }
 
 const SHEET_URL = 'https://docs.google.com/spreadsheets/d/1uk8a3mEJ-ydwNvC48QLKEPK5aLjxG66zUFi9bUaNjnE/export?format=csv&gid=0';

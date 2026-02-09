@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: 'Confira a agenda de eventos do GDG Porto Alegre - meetups, workshops, encontros e muito mais.',
 }
 
-const SHEET_URL = 'https://docs.google.com/spreadsheets/d/1uk8a3mEJ-ydwNvC48QLKEPK5aLjxG66zUFi9bUaNjnE/export?format=csv&gid=0';
+const SHEET_URL = 'https://docs.google.com/spreadsheets/d/1RanNmIUzA5w_CMW7Vgf7M0aMsSFd1VYo4Sp5ocSOCFA/export?format=csv&gid=0';
 
 async function getEvents(): Promise<Event[]> {
   const response = await fetch(SHEET_URL);
