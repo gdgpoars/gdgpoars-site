@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 
 export const metadata: Metadata = {
   title: 'Contato | GDG Porto Alegre',
-  description: 'Entre em contato com o GDG Porto Alegre - estamos sempre disponiveis para conversar.',
+  description: 'Entre em contato com o GDG Porto Alegre - estamos sempre disponíveis para conversar.',
 }
 
 const contactMethods = [
@@ -16,7 +16,7 @@ const contactMethods = [
     title: 'Instagram',
     description: 'Siga para novidades e conteudos',
     value: '@gdgportoalegre',
-    href: 'https://www.instagram.com/gdgportoalegre/',
+    href: 'https://www.instagram.com/gdgpoa',
     color: 'bg-google-red',
     hoverGlow: 'group-hover:shadow-google-red/40',
   },
@@ -34,7 +34,7 @@ const contactMethods = [
     title: 'WhatsApp',
     description: 'Entre no grupo da comunidade',
     value: 'Grupo GDG Poa',
-    href: 'https://chat.whatsapp.com/XXXXXX',
+    href: 'https://docs.google.com/forms/d/e/1FAIpQLScnIY1LIADYyteuSA_8PVJMBHrlv4A0WfoM_xPRVsXBSEQEOA/viewform',
     color: 'bg-google-green',
     hoverGlow: 'group-hover:shadow-google-green/40',
   },
@@ -65,8 +65,8 @@ export default function ContatoPage() {
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground">
-                Quer falar com a gente? Estamos sempre disponiveis para conversar sobre 
-                parcerias, eventos, duvidas ou apenas trocar uma ideia.
+                Quer falar com a gente? Estamos sempre disponíveis para conversar sobre 
+                parcerias, eventos, dúvidas ou apenas para trocar uma ideia :).
               </p>
             </div>
 
@@ -80,7 +80,7 @@ export default function ContatoPage() {
                   </div>
                   <h2 className="text-2xl font-bold mb-2">Entre em contato por email</h2>
                   <p className="text-muted-foreground mb-8">
-                    Essa e a melhor forma de falar conosco sobre assuntos mais detalhados
+                    Essa é a melhor forma de falar conosco sobre assuntos mais detalhados
                   </p>
                   <p className="text-3xl font-bold text-primary mb-8">gdgpoars@gmail.com</p>
                   <Button asChild size="lg" className="rounded-xl">
