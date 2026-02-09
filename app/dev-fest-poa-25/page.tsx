@@ -111,11 +111,10 @@ const testimonials = [
 ]
 
 const sponsors = {
-    master: { name: "Faculdade Dom Bosco", level: "Cota Impulso Master" },
-    Cota Master: ["Asaas", "Datalakers", "Dentsu", "Kobe Apps", "Rocketseat"],
-    Cota Colaborador: ["Latromi TI", "Alura + Fiap"],
-    Cota Apoio: ["CodeCafé", "ilegra", "Kinghost", "WK", "4 TRIX IT"],
-    Cota Impulso: ["Alcapone", "Canal da Cloud", "Casa Vivaro", "Codecon", "Critério", "Destino POA", "Use T.I."]
+  master: { name: "Faculdade Dom Bosco", "Asaas", "Datalakers", "Dentsu", "Kobe Apps", "Rocketseat", level: "master" },
+  colaborador: ["Latromi TI", "Alura + Fiap"],
+  apoio: ["CodeCafé", "ilegra", "KingHost", "4 TRIX IT"],
+  impulso: ["Alcapone","Canal da Cloud","Casa Vivaro", "Codecon", "Critério", "Destino POA", "Use T.I.", "WK Job Hub"],
 }
 
 const whatWorked = [
@@ -780,21 +779,21 @@ function SponsorsSection() {
                 </div>
 
                 <div className="max-w-4xl mx-auto space-y-8">
-                    {/* Master Sponsor */}
+                    {/* Master */}
                     <Card className="bg-gradient-to-r from-[#FBBC04]/20 to-[#FBBC04]/5 border-[#FBBC04]/30">
                         <CardContent className="p-8 text-center">
                             <span className="inline-block px-4 py-1 text-xs font-semibold uppercase tracking-wider bg-[#FBBC04] text-foreground rounded-full mb-4">
-                                Master
+                                colaborador
                             </span>
                             <h3 className="text-2xl font-bold">{sponsors.master.name}</h3>
                         </CardContent>
                     </Card>
 
-                    {/* Gold */}
+                    {/* Colaborador */}
                     <div>
                         <h4 className="text-center font-semibold mb-4 text-[#FBBC04]">Gold</h4>
                         <div className="flex flex-wrap justify-center gap-4">
-                            {sponsors.gold.map((sponsor) => (
+                            {sponsors.colaborador.map((sponsor) => (
                                 <Card key={sponsor} className="hover:shadow-lg transition-shadow">
                                     <CardContent className="p-4 px-8">
                                         <span className="font-medium">{sponsor}</span>
@@ -804,11 +803,11 @@ function SponsorsSection() {
                         </div>
                     </div>
 
-                    {/* Silver */}
+                    {/* Apoio */}
                     <div>
                         <h4 className="text-center font-semibold mb-4 text-muted-foreground">Silver</h4>
                         <div className="flex flex-wrap justify-center gap-4">
-                            {sponsors.silver.map((sponsor) => (
+                            {sponsors.apoio.map((sponsor) => (
                                 <Card key={sponsor} className="hover:shadow-lg transition-shadow">
                                     <CardContent className="p-4 px-6">
                                         <span className="text-sm font-medium">{sponsor}</span>
@@ -818,11 +817,11 @@ function SponsorsSection() {
                         </div>
                     </div>
 
-                    {/* Bronze */}
+                    {/* Impulso */}
                     <div>
                         <h4 className="text-center font-semibold mb-4 text-[#CD7F32]">Bronze</h4>
                         <div className="flex flex-wrap justify-center gap-3">
-                            {sponsors.bronze.map((sponsor) => (
+                            {sponsors.impulso.map((sponsor) => (
                                 <span
                                     key={sponsor}
                                     className="px-4 py-2 rounded-full bg-muted text-sm font-medium"
@@ -831,30 +830,6 @@ function SponsorsSection() {
                                 </span>
                             ))}
                         </div>
-                    </div>
-
-                    {/* Community */}
-                    <div>
-                        <h4 className="text-center font-semibold mb-4 text-[#4285F4]">Comunidade</h4>
-                        <div className="flex flex-wrap justify-center gap-3">
-                            {sponsors.community.map((sponsor) => (
-                                <span
-                                    key={sponsor}
-                                    className="px-4 py-2 rounded-full bg-[#4285F4]/10 text-sm font-medium"
-                                >
-                                    {sponsor}
-                                </span>
-                            ))}
-                        </div>
-                    </div>
-
-                    {/* Venue Partner */}
-                    <Card className="bg-[#34A853]/10 border-[#34A853]/30">
-                        <CardContent className="p-6 text-center">
-                            <span className="text-sm text-muted-foreground">Parceiro de Local</span>
-                            <h4 className="text-lg font-semibold">{sponsors.partner}</h4>
-                        </CardContent>
-                    </Card>
                 </div>
             </div>
         </section>
