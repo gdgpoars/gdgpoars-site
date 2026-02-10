@@ -1019,7 +1019,7 @@ function CTASection() {
                                     asChild
                                     variant="outline" className="border-[#34A853] text-[#34A853] hover:bg-[#34A853]/10 bg-transparent"
                                     >
-                                    <Link href="https://SEU-LINK-DA-LISTA-DE-ESPERA">
+                                    <Link href="https://forms.gle/ufdoNeJx29ax7hxR9">
                                         Entrar na lista de espera
                                         <ArrowRight className="w-4 h-4 ml-2" />
                                     </Link>
