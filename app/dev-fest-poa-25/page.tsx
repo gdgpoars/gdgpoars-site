@@ -32,6 +32,7 @@ import {
     ChevronRight,
     Menu,
     X,
+    Link,
 } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -997,11 +998,16 @@ function CTASection() {
                                 <div className="text-center md:text-left">
                                     <h3 className="text-2xl font-bold mb-4">Quer patrocinar?</h3>
                                     <p className="text-muted-foreground mb-6">
-                                        Participe da próxima edição e conecte sua marca com a comunidade tech do Rio Grande do Sul.
+                                        Participe da próxima edição e conecte sua marca com a maior comunidade tech do Rio Grande do Sul.
                                     </p>
-                                    <Button className="bg-[#4285F4] hover:bg-[#4285F4]/90 text-background">
+                                    <Button 
+                                    asChild
+                                    className="bg-[#4285F4] hover:bg-[#4285F4]/90 text-background"
+                                    >
+                                    <Link href="https://forms.gle/444YexjxoH9LFRZC7">
                                         Quero ser parceiro
                                         <ArrowRight className="w-4 h-4 ml-2" />
+                                        </Link>
                                     </Button>
                                 </div>
                                 <div className="text-center md:text-left">
@@ -1009,9 +1015,14 @@ function CTASection() {
                                     <p className="text-muted-foreground mb-6">
                                         Entre na lista de espera e seja avisado(a) assim que as inscrições abrirem.
                                     </p>
-                                    <Button variant="outline" className="border-[#34A853] text-[#34A853] hover:bg-[#34A853]/10 bg-transparent">
+                                    <Button 
+                                    asChild
+                                    variant="outline" className="border-[#34A853] text-[#34A853] hover:bg-[#34A853]/10 bg-transparent"
+                                    >
+                                    <Link href="https://SEU-LINK-DA-LISTA-DE-ESPERA">
                                         Entrar na lista de espera
                                         <ArrowRight className="w-4 h-4 ml-2" />
+                                    </Link>
                                     </Button>
                                 </div>
                             </div>
