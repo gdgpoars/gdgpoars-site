@@ -120,7 +120,6 @@ const sponsors = {
 
 const whatWorked = [
     "Trilhas bem definidas e variadas",
-    "Bom fluxo de pessoas entre as salas",
     "Recepção acolhedora e sinalização clara",
     "Boa interação com patrocinadores",
     "Engajamento nas redes sociais",
@@ -129,9 +128,8 @@ const whatWorked = [
 
 const whatCanImprove = [
     "Ampliar a capacidade de inscritos",
-    "Aumentar a quantidade de pausas e coffee breaks",
+    "Aumentar a quantidade de pausas entre conteúdos",
     "Integrar ainda mais atividades interativas (gamificação)",
-    "Melhorar acessibilidade física e de conteúdo",
     "Criar mais momentos de networking estruturado",
 ]
 
