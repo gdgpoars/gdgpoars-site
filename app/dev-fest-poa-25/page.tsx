@@ -1045,7 +1045,6 @@ function CTASection() {
                         <div className="flex flex-wrap justify-center gap-4">
                             {[
                                 { label: "GDG Porto Alegre", color: "#4285F4" },
-                                { label: "WTM Porto Alegre", color: "#EA4335" },
                                 { label: "GDG Caxias do Sul", color: "#34A853" },
                             ].map((community) => (
                                 <Button

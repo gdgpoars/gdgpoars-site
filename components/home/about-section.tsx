@@ -24,7 +24,7 @@ const objectives = [
   },
   {
     icon: Handshake,
-    text: 'Ser uma ponte entre empresas e pessoas, gerando networking',
+    text: 'Ser uma ponte entre empresas e pessoas, gerando networking e trocas',
     color: 'bg-google-green',
     lightBg: 'bg-google-green/10',
   },
@@ -51,7 +51,7 @@ export function AboutSection() {
             Quem somos
           </span>
           <h2 className="text-3xl font-bold md:text-4xl lg:text-5xl text-balance mb-6">
-            Oi, galera! Ja ouviu a palavra do{' '}
+            Ei, galera! Já ouviram a palavra do{' '}
             <span className="bg-gradient-to-r from-google-blue via-google-red to-google-yellow bg-clip-text text-transparent">
               GDG Poa
             </span>{' '}
@@ -101,8 +101,8 @@ export function AboutSection() {
                     <h4 className="font-semibold">Comunidade no WhatsApp</h4>
                   </div>
                   <p className="text-muted-foreground leading-relaxed">
-                    Mais de 700 membros, com cerca de 70% membros ativos trocando ideias (quase que o dia todo!) sobre 
-                    tecnologias, vagas, cursos, e nos apoiando mutuamente no dia a dia.
+                    Mais de 700 membros, com cerca de 40% de membros ativos trocando ideias (quase que o dia todo!) sobre 
+                    tecnologias, vagas, cursos, e se apoiando mutuamente no dia a dia.
                   </p>
                 </div>
                 <div className="space-y-4">
@@ -113,8 +113,8 @@ export function AboutSection() {
                     <h4 className="font-semibold">Eventos e Meetups</h4>
                   </div>
                   <p className="text-muted-foreground leading-relaxed">
-                    Organizamos eventos em Universidades e empresas parceiras, trazendo 
-                    talks relevantes para as necessidades da nossa comunidade.
+                    Organizamos eventos em niversidades e empresas parceiras, trazendo 
+                    talks relevantes para as necessidades da comunidade em geral.
                   </p>
                 </div>
               </div>
