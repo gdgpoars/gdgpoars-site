@@ -1000,38 +1000,38 @@ function CTASection() {
                                     </p>
                                     <Button
                                     asChild
-                                    className="bg-[#4285F4] hover:bg-[#4285F4]/90 text-background"
+                                    className="bg-[#4285F4] hover:bg-[#4285F4]/90 text-white"
                                     >
-                                    <Link
-                                    href="https://forms.gle/444YexjxoH9LFRZC7"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center gap-2"
-                            >
-                                    Quero ser parceiro
-                                    <ArrowRight className="w-4 h-4" />
-                                </Link>
-                            </Button>
+                                    <a
+                                        href="https://forms.gle/444YexjxoH9LFRZC7"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center gap-2"
+                                    >
+                                        Quero ser parceiro
+                                        <ArrowRight className="w-4 h-4" />
+                                    </a>
+                                    </Button>
                                 </div>
                                 <div className="text-center md:text-left">
                                     <h3 className="text-2xl font-bold mb-4">Quer participar?</h3>
                                     <p className="text-muted-foreground mb-6">
-                                        Entre na lista de espera e seja avisado(a) assim que as inscrições abrirem.
+                                        Entre na lista de espera e saiba antes de todo mundo!
                                     </p>
-                                    <Button
-                                        asChild
-                                        variant="outline"
-                                        className="border-[#34A853] text-[#34A853] hover:bg-[#34A853]/10 bg-transparent"
+                                   <Button
+                                    asChild
+                                    variant="outline"
+                                    className="border-[#34A853] text-[#34A853] hover:bg-[#34A853]/10"
                                     >
-                                        <Link
-                                            href="https://forms.gle/ufdoNeJx29ax7hxR9"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex items-center gap-2"
-                                        >
-                                            Entrar na lista de espera
-                                            <ArrowRight className="w-4 h-4" />
-                                        </Link>
+                                    <a
+                                        href="https://forms.gle/ufdoNeJx29ax7hxR9"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center gap-2"
+                                    >
+                                        Entrar na lista de espera
+                                        <ArrowRight className="w-4 h-4" />
+                                    </a>
                                     </Button>
                                 </div>
                             </div>
