@@ -978,9 +978,13 @@ function LearningsSection() {
 }
 
 // CTA Section
-function CTASection() {
-    return (
-        <section id="2026" className="py-20 bg-background">
+            function CTASection() {
+                return (
+                <section
+            id="2026"
+            className="relative py-20 bg-background"
+            style={{ isolation: "isolate" }}
+            >
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
@@ -989,7 +993,7 @@ function CTASection() {
                     <p className="text-muted-foreground text-lg">Já estamos preparando o próximo capítulo</p>
                 </div>
   <div className="max-w-4xl mx-auto">
-  <Card className="relative z-10 bg-gradient-to-br from-[#4285F4]/10 via-[#EA4335]/10 to-[#FBBC04]/10 border-2">
+<Card className="relative z-20 bg-gradient-to-br from-[#4285F4]/10 via-[#EA4335]/10 to-[#FBBC04]/10 border-2">
     <CardContent className="p-8 md:p-12">
       <div className="grid md:grid-cols-2 gap-8">
 
@@ -1012,7 +1016,7 @@ function CTASection() {
                 "noopener,noreferrer"
               )
             }
-            className="pointer-events-auto bg-[#4285F4] hover:bg-[#4285F4]/90 text-white flex items-center gap-2"
+            className="bg-[#4285F4] hover:bg-[#4285F4]/90 text-white flex items-center gap-2 relative z-30"
           >
             Quero ser parceiro
             <ArrowRight className="w-4 h-4" />
@@ -1039,7 +1043,7 @@ function CTASection() {
                 "noopener,noreferrer"
               )
             }
-            className="pointer-events-auto border-[#34A853] text-[#34A853] hover:bg-[#34A853]/10 flex items-center gap-2"
+            className="border-[#34A853] text-[#34A853] hover:bg-[#34A853]/10 flex items-center gap-2 relative z-30"
           >
             Entrar na lista de espera
             <ArrowRight className="w-4 h-4" />
@@ -1048,7 +1052,7 @@ function CTASection() {
       </div>
     </CardContent>
   </Card>
-
+  
                     <div className="mt-12 text-center">
                         <p className="text-lg text-muted-foreground mb-4">Fique conectado(a):</p>
                         <div className="flex flex-wrap justify-center gap-4">
