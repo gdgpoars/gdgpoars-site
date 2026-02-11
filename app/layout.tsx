@@ -8,13 +8,22 @@ import { ThemeProvider } from '@/components/theme-provider'
 export const metadata: Metadata = {
   title: 'GDG Porto Alegre | Comunidade de Tecnologia',
   description: 'Comunidade de tecnologia de Porto Alegre - RS. Conectamos pessoas desenvolvedoras, profissionais de tech e entusiastas em uma comunidade inclusiva e colaborativa.',
-  keywords: ['GDG', 'Porto Alegre', 'Google Developers Group', 'comunidade', 'tecnologia', 'desenvolvedoras', 'diversidade', 'inclusão'],
+  keywords: [
+    'GDG Porto Alegre',
+    'Google Developers Group Porto Alegre',
+    'DevFest Porto Alegre',
+    'Hackathon Porto Alegre',
+    'Eventos de Tecnologia RS',
+    'Comunidade de Tecnologia Porto Alegre'
+  ],
   authors: [{ name: 'GDG Porto Alegre' }],
   openGraph: {
     title: 'GDG Porto Alegre | Comunidade de Tecnologia',
-    description: 'Comunidade de tecnologia de Porto Alegre - RS. Conectamos pessoas desenvolvedoras, profissionais de tech e entusiastas.',
+    description: 'Comunidade oficial Google Developers Group em Porto Alegre. Eventos, DevFest, Hackathons e networking em tecnologia.',
     type: 'website',
     locale: 'pt_BR',
+    url: 'https://gdgportoalegre.com.br',
+    siteName: 'GDG Porto Alegre',
   },
   generator: 'v0.app'
 }
@@ -31,9 +40,30 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "GDG Porto Alegre",
+    url: "https://gdgportoalegre.com.br",
+    logo: "https://gdgportoalegre.com.br/logo.png",
+    description: "Comunidade oficial Google Developers Group em Porto Alegre que organiza eventos como DevFest, Hackathons e meetups de tecnologia.",
+    sameAs: [
+      "https://www.instagram.com/gdgportoalegre",
+      "https://www.linkedin.com/company/gdgportoalegre"
+    ],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Porto Alegre",
+      addressRegion: "RS",
+      addressCountry: "BR"
+    }
+  }
+
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <head>
+
         {/* Google Analytics GA4 */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-JV4GWN37HL"
@@ -48,9 +78,23 @@ export default function RootLayout({
           `}
         </Script>
 
+        {/* Structured Data - Organization */}
+        <Script
+          id="structured-data"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap"
+          rel="stylesheet"
+        />
+
       </head>
 
       <body className="font-sans antialiased">

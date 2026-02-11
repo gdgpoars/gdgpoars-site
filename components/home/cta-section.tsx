@@ -51,10 +51,10 @@ export function CTASection() {
         <div className="mx-auto max-w-3xl text-center mb-16">
           <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary mb-6">
             <Sparkles className="size-4" />
-            <span>Faca parte</span>
+            <span>Faça parte</span>
           </div>
           <h2 className="text-3xl font-bold md:text-4xl lg:text-5xl mb-6">
-            Junte-se a nos!
+            Junte-se a nós!
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto">
             Faça parte da nossa comunidade e conecte-se com pessoas incríveis da área de tecnologia.
