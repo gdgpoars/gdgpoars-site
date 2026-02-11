@@ -112,10 +112,20 @@ const testimonials = [
 ]
 
 const sponsors = {
-  master: { name: "Faculdade Dom Bosco", level: "master" },
+  anfitriaMasterImpulso: ["Faculdade Dom Bosco"],
+  master: ["Asaas", "Datalakers", "Dentsu", "Kobe Apps", "Rocketseat"],
   colaborador: ["Latromi TI", "Alura + Fiap"],
   apoio: ["CodeCafé", "ilegra", "KingHost", "4 TRIX IT"],
-  impulso: ["Alcapone","Canal da Cloud","Casa Vivaro", "Codecon", "Critério", "Destino POA", "Use T.I.", "WK Job Hub"],
+  impulso: [
+    "Alcapone",
+    "Canal da Cloud",
+    "Casa Vivaro",
+    "Codecon",
+    "Critério",
+    "Destino POA",
+    "Use T.I.",
+    "WK Job Hub",
+  ],
 }
 
 const whatWorked = [
@@ -764,77 +774,106 @@ function TestimonialsSection() {
 }
 
 function SponsorsSection() {
-    return (
-        <section id="patrocinadores" className="py-20 bg-background">
-            <div className="container mx-auto px-4">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
-                        Patrocinadores & Parceiros
-                    </h2>
-                    <p className="text-muted-foreground text-lg">
-                        21 empresas que acreditaram e investiram no DevFest Porto Alegre
-                    </p>
-                </div>
+  return (
+    <section id="patrocinadores" className="py-20 bg-background">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
+            Patrocinadores & Parceiros
+          </h2>
+          <p className="text-muted-foreground text-lg">
+            Empresas que acreditaram e impulsionaram o DevFest Porto Alegre 2025
+          </p>
+        </div>
 
-                <div className="max-w-4xl mx-auto space-y-8">
-                    {/* Master */}
-                    <Card className="bg-gradient-to-r from-[#FBBC04]/20 to-[#FBBC04]/5 border-[#FBBC04]/30">
-                        <CardContent className="p-8 text-center">
-                            <span className="inline-block px-4 py-1 text-xs font-semibold uppercase tracking-wider bg-[#FBBC04] text-foreground rounded-full mb-4">
-                                colaborador
-                            </span>
-                            <h3 className="text-2xl font-bold">{sponsors.master.name}</h3>
-                        </CardContent>
-                    </Card>
+        <div className="max-w-5xl mx-auto space-y-12">
 
-                    {/* Colaborador */}
-                    <div>
-                        <h4 className="text-center font-semibold mb-4 text-[#FBBC04]">Gold</h4>
-                        <div className="flex flex-wrap justify-center gap-4">
-                            {sponsors.colaborador.map((sponsor) => (
-                                <Card key={sponsor}>
-                                    <CardContent className="p-4 px-8">
-                                        <span className="font-medium">{sponsor}</span>
-                                    </CardContent>
-                                </Card>
-                            ))}
-                        </div>
-                    </div>
-
-                    {/* Apoio */}
-                    <div>
-                        <h4 className="text-center font-semibold mb-4 text-muted-foreground">Silver</h4>
-                        <div className="flex flex-wrap justify-center gap-4">
-                            {sponsors.apoio.map((sponsor) => (
-                                <Card key={sponsor}>
-                                    <CardContent className="p-4 px-6">
-                                        <span className="text-sm font-medium">{sponsor}</span>
-                                    </CardContent>
-                                </Card>
-                            ))}
-                        </div>
-                    </div>
-
-                    {/* Impulso */}
-                    <div>
-                        <h4 className="text-center font-semibold mb-4 text-[#CD7F32]">Bronze</h4>
-                        <div className="flex flex-wrap justify-center gap-3">
-                            {sponsors.impulso.map((sponsor) => (
-                                <span
-                                    key={sponsor}
-                                    className="px-4 py-2 rounded-full bg-muted text-sm font-medium"
-                                >
-                                    {sponsor}
-                                </span>
-                            ))}
-                        </div>
-                    </div>
-
-                </div>
+          {/* ANFITRIÃ + MASTER IMPULSO */}
+          <div>
+            <h3 className="text-center text-xl font-bold mb-6 text-[#FBBC04]">
+              Anfitriã & Cota Master Impulso
+            </h3>
+            <div className="flex justify-center">
+              {sponsors.anfitriaMasterImpulso.map((sponsor) => (
+                <Card key={sponsor} className="bg-gradient-to-r from-[#FBBC04]/20 to-[#FBBC04]/5 border-[#FBBC04]/30">
+                  <CardContent className="p-8 text-center">
+                    <span className="text-2xl font-bold">{sponsor}</span>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
-        </section>
-    )
-}   
+          </div>
+
+          {/* MASTER */}
+          <div>
+            <h3 className="text-center text-lg font-semibold mb-4 text-[#EA4335]">
+              Cota Master
+            </h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              {sponsors.master.map((sponsor) => (
+                <Card key={sponsor}>
+                  <CardContent className="p-4 px-8 text-center">
+                    <span className="font-medium">{sponsor}</span>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* COLABORADOR */}
+          <div>
+            <h3 className="text-center text-lg font-semibold mb-4 text-[#4285F4]">
+              Cota Colaborador
+            </h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              {sponsors.colaborador.map((sponsor) => (
+                <Card key={sponsor}>
+                  <CardContent className="p-4 px-6 text-center">
+                    <span className="font-medium">{sponsor}</span>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* APOIO */}
+          <div>
+            <h3 className="text-center text-lg font-semibold mb-4 text-muted-foreground">
+              Cota Apoio
+            </h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              {sponsors.apoio.map((sponsor) => (
+                <Card key={sponsor}>
+                  <CardContent className="p-4 px-6 text-center">
+                    <span className="text-sm font-medium">{sponsor}</span>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* IMPULSO */}
+          <div>
+            <h3 className="text-center text-lg font-semibold mb-4 text-[#34A853]">
+              Cota Impulso
+            </h3>
+            <div className="flex flex-wrap justify-center gap-3">
+              {sponsors.impulso.map((sponsor) => (
+                <span
+                  key={sponsor}
+                  className="px-4 py-2 rounded-full bg-muted text-sm font-medium"
+                >
+                  {sponsor}
+                </span>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  )
+}
 
 // Impact Section
 function ImpactSection() {
@@ -978,83 +1017,84 @@ function LearningsSection() {
 }
 
 // CTA Section
-            function CTASection() {
-                return (
-                <section
-            id="2026"
-            className="relative py-20 bg-background"
-            style={{ isolation: "isolate" }}
-            >
+function CTASection() {
+    return (
+        <section id="2026" className="py-20 bg-background">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
                         E o DevFest 2026?
                     </h2>
-                    <p className="text-muted-foreground text-lg">Já estamos preparando o próximo capítulo</p>
+                    <p className="text-muted-foreground text-lg">
+                        Já estamos preparando o próximo capítulo
+                    </p>
                 </div>
-  <div className="max-w-4xl mx-auto">
-<Card className="relative z-20 bg-gradient-to-br from-[#4285F4]/10 via-[#EA4335]/10 to-[#FBBC04]/10 border-2">
-    <CardContent className="p-8 md:p-12">
-      <div className="grid md:grid-cols-2 gap-8">
 
-        {/* PATROCINADOR */}
-        <div className="text-center md:text-left">
-          <h3 className="text-2xl font-bold mb-4">
-            Quer patrocinar?
-          </h3>
+                <div className="max-w-4xl mx-auto">
+                    <Card className="relative z-10 bg-gradient-to-br from-[#4285F4]/10 via-[#EA4335]/10 to-[#FBBC04]/10 border-2">
+                        <CardContent className="p-8 md:p-12">
+                            <div className="grid md:grid-cols-2 gap-8">
 
-          <p className="text-muted-foreground mb-6">
-            Participe da próxima edição e conecte sua marca com a maior comunidade tech do Rio Grande do Sul.
-          </p>
+                                {/* PATROCINADOR */}
+                                <div className="text-center md:text-left">
+                                    <h3 className="text-2xl font-bold mb-4">
+                                        Quer patrocinar?
+                                    </h3>
 
-          <Button
-            type="button"
-            onClick={() =>
-              window.open(
-                "https://forms.gle/444YexjxoH9LFRZC7",
-                "_blank",
-                "noopener,noreferrer"
-              )
-            }
-            className="bg-[#4285F4] hover:bg-[#4285F4]/90 text-white flex items-center gap-2 relative z-30"
-          >
-            Quero ser parceiro
-            <ArrowRight className="w-4 h-4" />
-          </Button>
-        </div>
+                                    <p className="text-muted-foreground mb-6">
+                                        Participe da próxima edição e conecte sua marca com a maior comunidade tech do Rio Grande do Sul.
+                                    </p>
 
-        {/* PARTICIPANTE */}
-        <div className="text-center md:text-left">
-          <h3 className="text-2xl font-bold mb-4">
-            Quer participar?
-          </h3>
+                                    <Button
+                                        asChild
+                                        className="bg-[#4285F4] hover:bg-[#4285F4]/90 text-white flex items-center gap-2"
+                                    >
+                                        <a
+                                            href="https://forms.gle/444YexjxoH9LFRZC7"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            Quero ser parceiro
+                                            <ArrowRight className="w-4 h-4 ml-2" />
+                                        </a>
+                                    </Button>
+                                </div>
 
-          <p className="text-muted-foreground mb-6">
-            Entre na lista de espera e saiba antes de todo mundo!
-          </p>
+                                {/* PARTICIPANTE */}
+                                <div className="text-center md:text-left">
+                                    <h3 className="text-2xl font-bold mb-4">
+                                        Quer participar?
+                                    </h3>
 
-          <Button
-            type="button"
-            variant="outline"
-            onClick={() =>
-              window.open(
-                "https://forms.gle/ufdoNeJx29ax7hxR9",
-                "_blank",
-                "noopener,noreferrer"
-              )
-            }
-            className="border-[#34A853] text-[#34A853] hover:bg-[#34A853]/10 flex items-center gap-2 relative z-30"
-          >
-            Entrar na lista de espera
-            <ArrowRight className="w-4 h-4" />
-          </Button>
-        </div>
-      </div>
-    </CardContent>
-  </Card>
-  
+                                    <p className="text-muted-foreground mb-6">
+                                        Entre na lista de espera e saiba antes de todo mundo!
+                                    </p>
+
+                                    <Button
+                                        asChild
+                                        variant="outline"
+                                        className="border-[#34A853] text-[#34A853] hover:bg-[#34A853]/10 flex items-center gap-2"
+                                    >
+                                        <a
+                                            href="https://forms.gle/ufdoNeJx29ax7hxR9"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            Entrar na lista de espera
+                                            <ArrowRight className="w-4 h-4 ml-2" />
+                                        </a>
+                                    </Button>
+                                </div>
+
+                            </div>
+                        </CardContent>
+                    </Card>
+
                     <div className="mt-12 text-center">
-                        <p className="text-lg text-muted-foreground mb-4">Fique conectado(a):</p>
+                        <p className="text-lg text-muted-foreground mb-4">
+                            Fique conectado(a):
+                        </p>
+
                         <div className="flex flex-wrap justify-center gap-4">
                             {[
                                 { label: "GDG Porto Alegre", color: "#4285F4" },
@@ -1064,13 +1104,17 @@ function LearningsSection() {
                                     key={community.label}
                                     variant="outline"
                                     className="rounded-full bg-transparent"
-                                    style={{ borderColor: community.color, color: community.color }}
+                                    style={{
+                                        borderColor: community.color,
+                                        color: community.color,
+                                    }}
                                 >
                                     {community.label}
                                 </Button>
                             ))}
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
