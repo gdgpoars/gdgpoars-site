@@ -1,8 +1,9 @@
 'use client'
 
 import * as React from 'react'
-import { ExternalLink } from 'lucide-react'
+import { ExternalLink, Home } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 const values = [
   {
@@ -146,6 +147,42 @@ export default function ParaMulheresPage() {
         }
       `}</style>
 
+      {/* Mini header com botão de voltar ao início */}
+      <div style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 50,
+        padding: '12px 24px',
+        display: 'flex',
+        alignItems: 'center',
+        background: 'rgba(26, 10, 46, 0.85)',
+        backdropFilter: 'blur(12px)',
+        borderBottom: '1px solid rgba(236,72,153,0.2)',
+      }}>
+        <Link
+          href="/"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '8px',
+            background: 'linear-gradient(135deg, rgba(236,72,153,0.2), rgba(168,85,247,0.2))',
+            border: '1px solid rgba(236,72,153,0.35)',
+            borderRadius: '12px',
+            padding: '8px 16px',
+            color: '#f9a8d4',
+            fontSize: '0.9rem',
+            fontWeight: 600,
+            textDecoration: 'none',
+            transition: 'all 0.3s ease',
+          }}
+        >
+          <Home size={16} />
+          Início
+        </Link>
+      </div>
+
       <div className="container mx-auto px-6">
 
         {/* Hero */}
@@ -265,7 +302,7 @@ export default function ParaMulheresPage() {
               Se você acredita no poder da comunidade, da troca e da representatividade feminina na tecnologia, o GDGirls é o seu lugar. Junte-se a nós e venha construir um ecossistema mais diverso, forte e inspirador em Porto Alegre 💜
             </p>
             <a
-              href="https:https://chat.whatsapp.com/BXsOpUSYi6u1xqG54bMvnF"
+              href="https://chat.whatsapp.com/SEU_LINK_AQUI"
               target="_blank"
               rel="noopener noreferrer"
               className="gdgirls-btn"
@@ -274,6 +311,7 @@ export default function ParaMulheresPage() {
               <ExternalLink size={16} />
             </a>
             <p style={{ color: '#c4b5fd', fontSize: '0.8rem', marginTop: '12px', opacity: 0.7 }}>
+              * Substitua o link do WhatsApp pelo link real do grupo
             </p>
           </div>
         </section>
