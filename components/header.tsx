@@ -19,8 +19,10 @@ import { ThemeToggle } from '@/components/theme-toggle'
 const navItems = [
   { href: '/', label: 'Home' },
   { href: '/proximos-eventos', label: 'Próximos Eventos' },
+  { href: '/para-mulheres', label: 'Para Mulheres' },
   { href: '/eventos-parceiros', label: 'Eventos Parceiros' },
   { href: '/parcerias', label: 'Parcerias' },
+  { href: '/banco-de-palestras', label: 'Banco de Palestras' },
   { href: '/faq', label: 'FAQ' },
   // { href: '/blog', label: 'Blog' },
   { href: '/contato', label: 'Contato' },
