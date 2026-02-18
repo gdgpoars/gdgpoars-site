@@ -302,7 +302,7 @@ export default function ParaMulheresPage() {
               Se você acredita no poder da comunidade, da troca e da representatividade feminina na tecnologia, o GDGirls é o seu lugar. Junte-se a nós e venha construir um ecossistema mais diverso, forte e inspirador em Porto Alegre 💜
             </p>
             <a
-              href="https://chat.whatsapp.com/SEU_LINK_AQUI"
+              href="https://chat.whatsapp.com/SEU_LINK_AQUIhttps://chat.whatsapp.com/BXsOpUSYi6u1xqG54bMvnF"
               target="_blank"
               rel="noopener noreferrer"
               className="gdgirls-btn"
@@ -311,7 +311,6 @@ export default function ParaMulheresPage() {
               <ExternalLink size={16} />
             </a>
             <p style={{ color: '#c4b5fd', fontSize: '0.8rem', marginTop: '12px', opacity: 0.7 }}>
-              * Substitua o link do WhatsApp pelo link real do grupo
             </p>
           </div>
         </section>
