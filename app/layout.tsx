@@ -25,7 +25,6 @@ export const metadata: Metadata = {
     url: 'https://gdgportoalegre.com.br',
     siteName: 'GDG Porto Alegre',
   },
-  generator: 'v0.app'
 }
 
 export const viewport: Viewport = {
