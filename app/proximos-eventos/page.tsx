@@ -1,10 +1,10 @@
 import { Metadata } from 'next'
-import { Calendar, Sparkles } from 'lucide-react'
+import { Calendar } from 'lucide-react'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { EventsCalendar } from '@/components/eventos/events-calendar'
 import { EventsList } from '@/components/eventos/events-list'
-import { Event } from '../types'
+import { Event, EventType } from '../types'
 import { formatDateUS } from '../utils/formatDate'
 
 export const metadata: Metadata = {
@@ -12,18 +12,34 @@ export const metadata: Metadata = {
   description: 'Confira a agenda de eventos do GDG Porto Alegre - meetups, workshops, encontros e muito mais.',
 }
 
-const SHEET_URL = 'https://docs.google.com/spreadsheets/d/1RanNmIUzA5w_CMW7Vgf7M0aMsSFd1VYo4Sp5ocSOCFA/export?format=csv&gid=0';
-
 async function getEvents(): Promise<Event[]> {
-  const response = await fetch(SHEET_URL);
-  const csv = await response.text();
+  const SHEET_URL = 'https://docs.google.com/spreadsheets/d/1RanNmIUzA5w_CMW7Vgf7M0aMsSFd1VYo4Sp5ocSOCFA/export?format=csv&gid=0';
 
-  const lines = csv.split('\n').slice(1);
+  try {
+    const response = await fetch(SHEET_URL, { cache: 'no-store' });
 
-  return lines.map(line => {
-    const [name, date, time, location, description, modality, rspv, investment] = line.split(',');
-    return { name, date, time, location, description, modality, rspv, investment };
-  }) as Event[];
+    if (!response.ok) return [];
+
+    const csv = await response.text();
+    const lines = csv.split('\n').slice(1).filter(line => line.trim() !== '');
+
+    return lines.map(line => {
+      const [name, date, time, location, description, modality, rspv, investment] = line.split(',');
+      return {
+        name: name ?? '',
+        date: date ?? '',
+        time: time ?? '',
+        location: location ?? '',
+        description: description ?? '',
+        modality: (modality?.trim() ?? 'presencial') as EventType,
+        rspv: rspv ?? '',
+        investment: investment ?? '',
+      };
+    });
+  } catch (error) {
+    console.error('Erro ao buscar eventos:', error);
+    return [];
+  }
 }
 
 export default async function ProximosEventosPage() {
@@ -35,7 +51,6 @@ export default async function ProximosEventosPage() {
       <Header />
       <main className="flex-1">
         <section className="relative py-24 md:py-32 overflow-hidden">
-          {/* Background decoration */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute -top-1/4 -right-1/4 size-[600px] rounded-full bg-google-blue/5 blur-3xl" />
             <div className="absolute -bottom-1/4 -left-1/4 size-[600px] rounded-full bg-google-green/5 blur-3xl" />
