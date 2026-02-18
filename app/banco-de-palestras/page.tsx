@@ -8,29 +8,29 @@ import { cn } from '@/lib/utils'
 
 const slides = [
   {
-    src: '/images/palestras/palestra-1.jpg',
-    alt: 'Palestra sobre desenvolvimento web',
-    caption: 'Tecnologia & Inovação',
+    src: '/images/devfest-kobeapps.jpg',
+    alt: 'Palestra sobre Observabilidade & IA Preditiva',
+    caption: 'Observabilidade & IA Preditiva',
   },
   {
-    src: '/images/palestras/palestra-2.jpg',
-    alt: 'Palestra sobre cloud computing',
-    caption: 'Cloud & DevOps',
+    src: '/images/devfest-ilegra.jpg',
+    alt: 'Palestra sobre Transição de Carreira & Requalificação Profissional',
+    caption: 'Transição de Carreira & Requalificação Profissional',
   },
   {
-    src: '/images/palestras/palestra-3.jpg',
-    alt: 'Palestra sobre machine learning',
-    caption: 'IA & Machine Learning',
+    src: '/images/devfest-ulisses.jpg',
+    alt: 'Palestra sobre Inteligência Artificial - Expectativa vs. Realidade',
+    caption: 'Inteligência Artificial - Expectativa vs. Realidade',
   },
   {
-    src: '/images/palestras/palestra-4.jpg',
-    alt: 'Palestra sobre mobile',
-    caption: 'Mobile Development',
+    src: '/images/devfest-gabriela.jpg',
+    alt: 'Palestra sobre carreira',
+    caption: 'Inovação & Autossuperação',
   },
 ]
 
 const stats = [
-  { icon: Mic, label: 'Palestrantes cadastrados', value: '50+' },
+  { icon: Mic, label: 'Pessoas palestrantes cadastradas', value: '15+' },
   { icon: Calendar, label: 'Eventos realizados', value: '30+' },
   { icon: Users, label: 'Participantes impactados', value: '2k+' },
 ]
@@ -66,8 +66,8 @@ export default function BancoDePalestrasPage() {
             Banco de Palestras
           </div>
           <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
-            Conheça nossos{' '}
-            <span className="text-google-blue">palestrantes</span>
+            Faça parte do nosso{' '}
+            <span className="text-google-blue">banco de palestras</span>
           </h1>
           <p className="max-w-xl text-muted-foreground text-lg">
             Uma base diversa de profissionais prontos para compartilhar conhecimento nos eventos do GDG Porto Alegre.
@@ -157,10 +157,10 @@ export default function BancoDePalestrasPage() {
               <h2 className="text-2xl font-bold mb-4">Nossa base de palestrantes</h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  O GDG Porto Alegre mantém um banco ativo de palestrantes — profissionais e entusiastas da tecnologia que se inscreveram para contribuir com conhecimento nos nossos eventos.
+                  O GDG Porto Alegre mantém um banco ativo de palestras e pessoas palestrantes — profissionais e entusiastas da tecnologia que se inscreveram para contribuir com conhecimento nos nossos eventos.
                 </p>
                 <p>
-                  Quando organizamos um evento, consultamos esse banco para encontrar palestrantes alinhados com o tema e formato planejados.
+                  Quando organizamos um evento, consultamos esse banco para encontrar palestras alinhadas com o tema e formato planejados.
                 </p>
                 <div className="rounded-2xl border border-google-yellow/30 bg-google-yellow/5 p-4 text-sm">
                   <p className="font-semibold text-foreground mb-1">⚠️ Atenção</p>
@@ -176,7 +176,7 @@ export default function BancoDePalestrasPage() {
 
             <div className="flex flex-col gap-3">
               <p className="text-sm font-medium text-muted-foreground text-center">
-                Quer fazer parte do nosso banco de palestrantes?
+                Quer fazer parte do nosso banco de palestras?
               </p>
               <Button
                 asChild
@@ -185,7 +185,7 @@ export default function BancoDePalestrasPage() {
               >
                 <a href="https://forms.gle/SF5MwfUkAoYJrbWYA" target="_blank" rel="noopener noreferrer">
                   <Mic className="size-5" />
-                  Quero ser palestrante
+                  Quero palestrar
                   <ExternalLink className="size-4 opacity-70" />
                 </a>
               </Button>

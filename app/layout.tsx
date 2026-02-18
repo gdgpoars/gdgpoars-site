@@ -64,6 +64,12 @@ export default function RootLayout({
     <html lang="pt-BR" suppressHydrationWarning>
       <head>
 
+        {/* Favicon emoji chimarrão */}
+        <link
+          rel="icon"
+          href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧉</text></svg>"
+        />
+
         {/* Google Analytics GA4 */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-JV4GWN37HL"
