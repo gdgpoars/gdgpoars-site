@@ -302,7 +302,7 @@ export default function ParaMulheresPage() {
               Se você acredita no poder da comunidade, da troca e da representatividade feminina na tecnologia, o GDGirls é o seu lugar. Junte-se a nós e venha construir um ecossistema mais diverso, forte e inspirador em Porto Alegre 💜
             </p>
             <a
-              href="https://chat.whatsapp.com/SEU_LINK_AQUIhttps://chat.whatsapp.com/BXsOpUSYi6u1xqG54bMvnF"
+              href="https://chat.whatsapp.com/BXsOpUSYi6u1xqG54bMvnF?mode=gi_t"
               target="_blank"
               rel="noopener noreferrer"
               className="gdgirls-btn"
