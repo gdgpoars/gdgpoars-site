@@ -8,22 +8,22 @@ import { cn } from '@/lib/utils'
 
 const slides = [
   {
-    src: '/images/devfest-kobeapps.jpg',
+    src: '/images/eventos/evfest-kobeapps.jpg',
     alt: 'Palestra sobre Observabilidade & IA Preditiva',
     caption: 'Observabilidade & IA Preditiva',
   },
   {
-    src: '/images/devfest-ilegra.jpg',
+    src: '/images/eventos/devfest-ilegra.jpg',
     alt: 'Palestra sobre Transição de Carreira & Requalificação Profissional',
     caption: 'Transição de Carreira & Requalificação Profissional',
   },
   {
-    src: '/images/devfest-ulisses.jpg',
+    src: '/images/eventos/devfest-ulisses.jpg',
     alt: 'Palestra sobre Inteligência Artificial - Expectativa vs. Realidade',
     caption: 'Inteligência Artificial - Expectativa vs. Realidade',
   },
   {
-    src: '/images/devfest-gabriela.jpg',
+    src: '/images/eventos/devfest-gabriela.jpg',
     alt: 'Palestra sobre carreira',
     caption: 'Inovação & Autossuperação',
   },
