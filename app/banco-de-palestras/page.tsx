@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils'
 
 const slides = [
   {
-    src: '/images/events/evfest-kobeapps.jpg',
+    src: '/images/events/devfest-kobeapps.jpg',
     alt: 'Palestra sobre Observabilidade & IA Preditiva',
     caption: 'Observabilidade & IA Preditiva',
   },
