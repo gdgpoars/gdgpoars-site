@@ -279,6 +279,17 @@ function HeroSection() {
                         <span className="text-sm">WTM Porto Alegre</span>
                     </div>
                 </div>
+
+                {/* Botão Relatório Financeiro — início */}
+                <div className="mt-8 flex justify-center">
+                    <a
+                        href="/dev-fest-poa-25/relatorio-financeiro"
+                        className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-background/10 backdrop-blur-sm border border-background/20 text-background text-sm font-medium hover:bg-background/20 transition-all"
+                    >
+                        📊 Relatório Financeiro
+                        <ArrowRight className="w-4 h-4" />
+                    </a>
+                </div>
             </div>
         </section>
     )
@@ -1040,11 +1051,9 @@ function CTASection() {
                                     <h3 className="text-2xl font-bold mb-4">
                                         Quer patrocinar?
                                     </h3>
-
                                     <p className="text-muted-foreground mb-6">
                                         Participe da próxima edição e conecte sua marca com a maior comunidade tech do Rio Grande do Sul.
                                     </p>
-
                                     <Button
                                         asChild
                                         className="bg-[#4285F4] hover:bg-[#4285F4]/90 text-white flex items-center gap-2"
@@ -1065,11 +1074,9 @@ function CTASection() {
                                     <h3 className="text-2xl font-bold mb-4">
                                         Quer participar?
                                     </h3>
-
                                     <p className="text-muted-foreground mb-6">
                                         Entre na lista de espera e saiba antes de todo mundo!
                                     </p>
-
                                     <Button
                                         asChild
                                         variant="outline"
@@ -1094,7 +1101,6 @@ function CTASection() {
                         <p className="text-lg text-muted-foreground mb-4">
                             Fique conectado(a):
                         </p>
-
                         <div className="flex flex-wrap justify-center gap-4">
                             {[
                                 { label: "GDG Porto Alegre", color: "#4285F4" },
@@ -1114,7 +1120,6 @@ function CTASection() {
                             ))}
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -1162,6 +1167,17 @@ function ThanksSection() {
                         <p className="text-background/70">Até o próximo encontro!</p>
                     </CardContent>
                 </Card>
+
+                {/* Botão Relatório Financeiro — final */}
+                <div className="mt-10 flex justify-center">
+                    <a
+                        href="/dev-fest-poa-25/relatorio-financeiro"
+                        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border bg-background hover:bg-muted transition-colors text-sm font-medium shadow-sm"
+                    >
+                        📊 Ver Relatório Financeiro
+                        <ArrowRight className="w-4 h-4" />
+                    </a>
+                </div>
             </div>
         </section>
     )
