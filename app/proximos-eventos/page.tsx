@@ -5,46 +5,77 @@ import { Footer } from '@/components/footer'
 import { EventsCalendar } from '@/components/eventos/events-calendar'
 import { EventsList } from '@/components/eventos/events-list'
 import { Event, EventType } from '../types'
-import { formatDateUS } from '../utils/formatDate'
 
 export const metadata: Metadata = {
   title: 'Proximos Eventos | GDG Porto Alegre',
   description: 'Confira a agenda de eventos do GDG Porto Alegre - meetups, workshops, encontros e muito mais.',
 }
 
+function parseCSVLine(line: string): string[] {
+  const fields: string[] = []
+  let current = ''
+  let inQuotes = false
+
+  for (let i = 0; i < line.length; i++) {
+    const char = line[i]
+    if (char === '"') {
+      inQuotes = !inQuotes
+    } else if (char === ',' && !inQuotes) {
+      fields.push(current.trim())
+      current = ''
+    } else {
+      current += char
+    }
+  }
+  fields.push(current.trim())
+  return fields
+}
+
+function parseDateBR(dateStr: string): Date | null {
+  if (!dateStr) return null
+  const [day, month, year] = dateStr.split('/')
+  const date = new Date(Number(year), Number(month) - 1, Number(day))
+  return isNaN(date.getTime()) ? null : date
+}
+
 async function getEvents(): Promise<Event[]> {
-  const SHEET_URL = 'https://docs.google.com/spreadsheets/d/1RanNmIUzA5w_CMW7Vgf7M0aMsSFd1VYo4Sp5ocSOCFA/export?format=csv&gid=0';
+  const SHEET_URL =
+    'https://docs.google.com/spreadsheets/d/1RanNmIUzA5w_CMW7Vgf7M0aMsSFd1VYo4Sp5ocSOCFA/export?format=csv&gid=0'
 
   try {
-    const response = await fetch(SHEET_URL, { cache: 'no-store' });
+    const response = await fetch(SHEET_URL, { cache: 'no-store' })
+    if (!response.ok) return []
 
-    if (!response.ok) return [];
+    const csv = await response.text()
+    const lines = csv.split('\n').slice(1).filter((line) => line.trim() !== '')
 
-    const csv = await response.text();
-    const lines = csv.split('\n').slice(1).filter(line => line.trim() !== '');
+    return lines.map((line) => {
+      const [name, date, time, location, description, modality, rspv, investment] =
+        parseCSVLine(line)
 
-    return lines.map(line => {
-      const [name, date, time, location, description, modality, rspv, investment] = line.split(',');
       return {
         name: name ?? '',
         date: date ?? '',
         time: time ?? '',
         location: location ?? '',
         description: description ?? '',
-        modality: (modality?.trim() ?? 'presencial') as EventType,
+        modality: (modality?.trim().toLowerCase() ?? 'presencial') as EventType,
         rspv: rspv ?? '',
         investment: investment ?? '',
-      };
-    });
+      }
+    })
   } catch (error) {
-    console.error('Erro ao buscar eventos:', error);
-    return [];
+    console.error('Erro ao buscar eventos:', error)
+    return []
   }
 }
 
 export default async function ProximosEventosPage() {
-  const events = await getEvents();
-  const eventDates = events.map(event => formatDateUS(event.date));
+  const events = await getEvents()
+
+  const eventDates = events
+    .map((event) => parseDateBR(event.date))
+    .filter((d): d is Date => d !== null)
 
   return (
     <div className="flex min-h-screen flex-col">
