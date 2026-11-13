@@ -6,18 +6,20 @@ import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 
 export const metadata: Metadata = {
-  title: 'Nos vemos em 2027! | GDG Porto Alegre',
-  description: 'Já estamos preparando a próxima edição do GDG Porto Alegre. Deixe seu contato para saber antes de todo mundo quando ela for anunciada.',
+  title: 'GDG Porto Alegre | Comunidade de Tecnologia',
+  description: 'Comunidade de tecnologia de Porto Alegre - RS. Conectamos pessoas desenvolvedoras, profissionais de tech e entusiastas em uma comunidade inclusiva e colaborativa.',
   keywords: [
     'GDG Porto Alegre',
     'Google Developers Group Porto Alegre',
     'DevFest Porto Alegre',
+    'Hackathon Porto Alegre',
+    'Eventos de Tecnologia RS',
     'Comunidade de Tecnologia Porto Alegre'
   ],
   authors: [{ name: 'GDG Porto Alegre' }],
   openGraph: {
-    title: 'Nos vemos em 2027! | GDG Porto Alegre',
-    description: 'Já estamos preparando a próxima edição do GDG Porto Alegre. Deixe seu contato para saber antes de todo mundo quando ela for anunciada.',
+    title: 'GDG Porto Alegre | Comunidade de Tecnologia',
+    description: 'Comunidade oficial Google Developers Group em Porto Alegre. Eventos, DevFest, Hackathons e networking em tecnologia.',
     type: 'website',
     locale: 'pt_BR',
     url: 'https://gdgportoalegre.com.br',
